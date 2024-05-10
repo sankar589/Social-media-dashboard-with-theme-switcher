@@ -1,38 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:  hsl(232, 19%, 15%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard{
+  width: 75%;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head-text{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+}
+.top{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.toggle{
+  display: flex;
+  column-gap: 1.5vh;
+}
+.tog-switch{
+  width: 4.5vh;
+  height: 0.5vh;
+  padding: 1vh 0.3vh;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%));
+  border-radius: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tog-ball{
+  width :2vh;
+  height : 2vh;
+  border-radius: 100%;
+  background-color:  hsl(232, 19%, 15%);
+}
+
+.Overall-Card{
+  display: flex;
+  justify-content: space-between ;
+}
+
+.facebook , .twitter, .instagram , .youtube{
+  width: 35vh;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 1vh;
+  row-gap: 3vh;
+}
+
+.facebook{
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+.twitter{
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+.instagram{
+  border-top: 5px solid;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1; 
+}
+
+.youtube{
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+.today {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1vh;
+  color: hsl(163, 72%, 41%);
+  font-weight: 700;
+  font-size: 14px;
+}
+.up{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-up.svg');
+  width: 1vh;
+  height: 0.5vh;
+}
+.down{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-down.svg');
+  width: 1vh;
+  height: 0.5vh;
+}
+.followers{
+  font-size: 60px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.follow-text{
+  color:hsl(228, 34%, 66%);
+  letter-spacing: 6px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.handle{
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5vh;
+}
+.f-logo{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-facebook.svg');
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.i-logo{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-instagram.svg');
+  width: 2.7vh;
+  height: 2.7vh;
+}
+
+.t-logo{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-twitter.svg');
+  width: 2.5vh;
+  height: 2.2vh;
+}
+
+.y-logo{
+  background-image: url('../social-media-dashboard-with-theme-switcher-master/images/icon-youtube.svg');
+  width: 2.69vh;
+  height: 2.7vh;
+}
+
+.h-id{
+  font-size: 14px;
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+}
+.overview{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.Overview-details{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+
+.overview-card{
+  width : 27vh;
+  height: 10vh;
+  padding : 4vh;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 1vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap : 10px;
+  color:hsl(228, 34%, 66%); ;
+}
+
+.ov-value{
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  align-self: self-end;
+}
+
+.ov-today {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.8vh;
+  color: hsl(163, 72%, 41%);
+  font-weight: 700;
+  font-size: 12px;
+  justify-self: end;
+  align-self: self-end;
+}
+
+.move{
+  justify-self: self-end;
 }
