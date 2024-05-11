@@ -1,9 +1,18 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [theme,setTheme] = useState(false)
+
+  const changeTheme = () =>{
+    setTheme(!theme);
+  }
+
   return (
-    <div className="App">
-      <div className='dashboard'>
+    <div>
+    <div className={`App ${theme? 'light' : ''}`} >
+      <div className='dashboard' >
         <div className='header'>
           <div className='head-text'>
               <div className='top'>Social Media Dashboard</div>
@@ -11,14 +20,15 @@ function App() {
             </div>
           <div className='toggle'>
             <div className='tog-text'>Dark Mode</div>
-            <div className='tog-switch'>
-              <div className='tog-ball'></div>
-            </div>
+            <button className='btn' onClick={changeTheme} ><div className='tog-switch' style = {{justifyContent : theme? 'flex-end': 'flex-start'}}>
+            <div className={`tog-ball ${theme ? 'tog-ball-light' : ''}`}></div>
+            </div></button>
+            
           </div>
         </div>
         <br></br>
         <div className='Overall-Card'>
-          <div className='facebook'>
+          <div className={`facebook  ${theme? 'light-card' : ''}`}>
             <div className='handle'>
               <div className='f-logo'></div>
               <div className='h-id'>@nathanf</div>
@@ -34,7 +44,7 @@ function App() {
                 12 Today</div>
             </div>
           </div>
-          <div className='twitter'>
+          <div className={`twitter  ${theme? 'light-card' : ''}`}>
             <div className='handle'>
               <div className='t-logo'></div>
               <div className='h-id'>@nathanf</div>
@@ -50,7 +60,7 @@ function App() {
                 99 Today</div>
             </div>
           </div>
-          <div className='instagram'>
+          <div className={`instagram ${theme? 'light-card' : ''}`}>
             <div className='handle'>
               <div className='i-logo'></div>
               <div className='h-id'>@realnathanf</div>
@@ -65,7 +75,7 @@ function App() {
                 1099 Today</div>
             </div>
           </div>
-          <div className='youtube'>
+          <div className={`youtube ${theme? 'light-card' : ''}`}>
             <div className='handle'>
               <div className='y-logo'></div>
               <div className='h-id'>Nathan F.</div>
@@ -85,7 +95,7 @@ function App() {
         <div className='overview'>Overview - Today</div>
         <br></br>
         <div className='Overview-details'>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Page Views</div>
             <div className='f-logo move'></div>
             <div className='ov-value'>87</div>
@@ -93,15 +103,15 @@ function App() {
                 <div className='up' ></div>
                 3%</div>
           </div>
-          <div className=' overview-card'>
-            <div className='title'>Page Views</div>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
+            <div className='title'>Likes</div>
             <div className='f-logo move'></div>
             <div className='ov-value'>52</div>
             <div className='ov-today' style={{color : "hsl(356, 69%, 56%)"}}>
                 <div className='down' ></div>
                 2%</div>
           </div>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Likes</div>
             <div className='i-logo move'></div>
             <div className='ov-value'>5462</div>
@@ -109,7 +119,7 @@ function App() {
                 <div className='up' ></div>
                 2257%</div>
           </div>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Profile Views</div>
             <div className='i-logo move'></div>
             <div className='ov-value'>52k</div>
@@ -117,7 +127,7 @@ function App() {
                 <div className='up' ></div>
                 1375%</div>
           </div>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Retweets</div>
             <div className='t-logo move'></div>
             <div className='ov-value'>117</div>
@@ -125,7 +135,7 @@ function App() {
                 <div className='up' ></div>
                 303%</div>
           </div>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Likes</div>
             <div className='t-logo move'></div>
             <div className='ov-value'>507</div>
@@ -133,7 +143,7 @@ function App() {
                 <div className='up' ></div>
                 553%</div>
           </div>
-          <div className=' overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Likes</div>
             <div className='y-logo move'></div>
             <div className='ov-value'>107</div>
@@ -141,7 +151,7 @@ function App() {
                 <div className='down' ></div>
                 19%</div>
           </div>
-          <div className='overview-card'>
+          <div className={`overview-card ${theme? 'light-card' : ''}`}>
             <div className='title'>Total Views</div>
             <div className='y-logo move'></div>
             <div className='ov-value'>1407</div>
@@ -154,6 +164,7 @@ function App() {
         
 
       </div>
+    </div>
     </div>
   );
 }

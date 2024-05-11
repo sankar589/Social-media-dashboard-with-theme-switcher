@@ -13,6 +13,12 @@
   color: white;
 }
 
+.light{
+  background-color: hsl(225, 100%, 98%);
+  color: black;
+}
+
+
 .dashboard{
   width: 75%;
 }
@@ -48,7 +54,9 @@
   border-radius: 6vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+}
+.tog-text{
+  font-weight: 700;
 }
 .tog-ball{
   width :2vh;
@@ -57,6 +65,9 @@
   background-color:  hsl(232, 19%, 15%);
 }
 
+.tog-ball-light{
+  background-color: white;
+}
 .Overall-Card{
   display: flex;
   justify-content: space-between ;
@@ -121,7 +132,7 @@
   color:hsl(228, 34%, 66%);
   letter-spacing: 6px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .handle{
@@ -163,6 +174,14 @@
   font-weight: 700;
 }
 
+.btn{
+  all: initial;
+  align-self: self-start;
+}
+.title{
+  color:hsl(228, 34%, 66%);
+  font-weight: 700;
+}
 .Overview-details{
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -179,13 +198,12 @@
   display: grid;
   grid-template-columns: auto auto;
   gap : 10px;
-  color:hsl(228, 34%, 66%); ;
+  
 }
 
 .ov-value{
   font-size: 32px;
   font-weight: 700;
-  color: white;
   align-self: self-end;
 }
 
@@ -204,3 +222,8 @@
 .move{
   justify-self: self-end;
 }
+
+.light-card{
+  background-color: hsl(227, 47%, 96%);
+}
+
